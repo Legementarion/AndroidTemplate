@@ -3,13 +3,13 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
 
 
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 27
+        minSdkVersion 21
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -32,7 +32,7 @@ dependencies {
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
     implementation "com.google.dagger:dagger:$daggerVersion"
 
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation 'com.github.kittinunf.fuel:fuel-android:1.8.0'
     implementation 'com.google.code.gson:gson:2.8.2'

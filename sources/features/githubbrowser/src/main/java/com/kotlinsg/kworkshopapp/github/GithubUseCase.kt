@@ -10,7 +10,7 @@ interface GithubUseCase {
 }
 
 class GithubUseCaseImpl @Inject constructor(
-        val repo: GithubRepo
+        private val repo: GithubRepo
 ) : GithubUseCase {
 
     override fun loadInfoFromGithub(onLoaded: (GithubProject) -> Unit, onError: (Throwable) -> Unit) {

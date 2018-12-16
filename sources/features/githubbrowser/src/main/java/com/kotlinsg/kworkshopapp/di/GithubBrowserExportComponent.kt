@@ -1,10 +1,10 @@
-package com.kotlinsg.kworkshopapp.di;
+package com.kotlinsg.kworkshopapp.di
 
 import com.kotlinsg.kworkshopapp.actions.ShowGithubScreenAction
 import com.kotlinsg.kworkshopapp.actions.ShowGithubScreenActionRealImpl
 import dagger.Component
-import dagger.Module;
-import dagger.Provides;
+import dagger.Module
+import dagger.Provides
 
 @Module
 class GithubBrowserExportModule {

@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kotlinsg.kworkshopapp.app"
-    >
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kotlinsg.kworkshopapp.app">
 
     <application>
-        <activity android:name="com.kotlinsg.kworkshopapp.github.GithubActivity">
-        </activity>
+        <activity android:name="com.kotlinsg.kworkshopapp.github.GithubActivity"/>
     </application>
 
 </manifest>

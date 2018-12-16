@@ -25,8 +25,8 @@ class GithubActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_github)
         inject()
-        refreshButton = findViewById(R.id.stars_refresh) as Button
-        starsCountText = findViewById(R.id.stars_count_text) as TextView
+        refreshButton = findViewById<Button>(R.id.stars_refresh)
+        starsCountText = findViewById<TextView>(R.id.stars_count_text)
 
         refreshButton.setOnClickListener { useCase.loadInfoFromGithub(onLoaded = ::updateUI, onError = ::updateErrorUI) }
 
@@ -44,6 +44,6 @@ class GithubActivity : AppCompatActivity() {
     }
 
     private fun updateUI(result: GithubProject) {
-        starsCountText.setText("${result.name} stars count: ${result.stargazers_count}")
+        starsCountText.text = "${result.name} stars count: ${result.stargazersCount}"
     }
 }

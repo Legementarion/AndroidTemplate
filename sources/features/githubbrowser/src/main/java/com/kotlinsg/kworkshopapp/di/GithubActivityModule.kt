@@ -1,10 +1,10 @@
-package com.kotlinsg.kworkshopapp.di;
+package com.kotlinsg.kworkshopapp.di
 
-import com.kotlinsg.kworkshopapp.github.GithubUseCase;
-import com.kotlinsg.kworkshopapp.github.GithubUseCaseImpl;
+import com.kotlinsg.kworkshopapp.github.GithubUseCase
+import com.kotlinsg.kworkshopapp.github.GithubUseCaseImpl
 
-import dagger.Binds;
-import dagger.Module;
+import dagger.Binds
+import dagger.Module
 
 @Module
 interface GithubActivityModule {

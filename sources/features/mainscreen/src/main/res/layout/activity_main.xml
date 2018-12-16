@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,8 +12,7 @@
         android:layout_marginTop="64dp"
         android:text="Hello Singapore!"
         android:textColor="@android:color/black"
-        android:textSize="14dp"
-        />
+        android:textSize="14dp" />
 
     <ImageView
         android:id="@+id/icon"
@@ -25,6 +21,6 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="32dp"
         android:src="@drawable/ic_folder_open_teal_400_24dp"
-        />
+        tools:ignore="ContentDescription" />
 
 </LinearLayout>

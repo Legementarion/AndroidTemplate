@@ -6,8 +6,8 @@ import com.kotlinsg.kworkshopapp.network.NetworkClient
 import javax.inject.Inject
 
 class GithubRepoImpl @Inject constructor(
-        val client: NetworkClient,
-        val logger: Logger
+        private val client: NetworkClient,
+        private val logger: Logger
 ) : GithubRepo {
 
     override fun getSampleProject(onResult: (GithubProject) -> Unit, onError: (Throwable) -> Unit) {

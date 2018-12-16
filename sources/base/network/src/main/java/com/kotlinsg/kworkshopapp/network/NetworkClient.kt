@@ -15,7 +15,7 @@ interface NetworkClient {
 }
 
 class NetworkClientImpl @Inject constructor(
-        val logger: Logger
+        private val logger: Logger
 ) : NetworkClient {
 
     override fun requestProject(path: String, onResult: (GithubProject) -> Unit, onError: (Throwable) -> Unit) {

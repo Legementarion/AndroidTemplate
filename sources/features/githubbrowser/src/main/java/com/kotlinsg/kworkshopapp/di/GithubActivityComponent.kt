@@ -7,8 +7,8 @@ import dagger.Component
 
 @ActivityScope
 @Component(
-        dependencies = arrayOf(ApplicationProvider::class, NotificationProvider::class),
-        modules = arrayOf(GithubActivityModule::class))
+        dependencies = [ApplicationProvider::class, NotificationProvider::class],
+        modules = [GithubActivityModule::class])
 interface GithubActivityComponent {
     fun inject(activity: GithubActivity)
 

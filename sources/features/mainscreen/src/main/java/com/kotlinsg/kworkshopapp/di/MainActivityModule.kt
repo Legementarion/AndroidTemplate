@@ -1,8 +1,6 @@
-package com.kotlinsg.kworkshopapp.di;
+package com.kotlinsg.kworkshopapp.di
 
-import dagger.Module;
+import dagger.Module
 
 @Module
-public interface MainActivityModule {
-
-}
+interface MainActivityModule

@@ -10,7 +10,7 @@ import javax.inject.Inject
 class RealApp : Application(), App {
 
     @Inject lateinit var toaster: Toaster
-    val appComponent: AppComponent by lazy { AppComponent.Initializer.init(this@RealApp) }
+    private val appComponent: AppComponent by lazy { AppComponent.Initializer.init(this@RealApp) }
 
     override fun onCreate() {
         super.onCreate()

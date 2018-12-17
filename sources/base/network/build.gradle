@@ -34,6 +34,16 @@ dependencies {
 
     implementation 'com.github.kittinunf.fuel:fuel-android:1.8.0'
     implementation 'com.google.code.gson:gson:2.8.2'
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+
+    // OkHttp
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    // OkHttp Profiler plugin install needed
+    implementation 'com.itkacher.okhttpprofiler:okhttpprofiler:1.0.2'
 }
 
 repositories {

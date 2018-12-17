@@ -29,13 +29,9 @@ interface AppComponent : ApplicationProvider {
                 val repoProvider = RepoComponent.Initializer
                         .init(mainToolsProvider)
 
-                val githubBrowserProvider = GithubBrowserExportComponent.Initializer
-                        .init(mainToolsProvider)
-
                 return DaggerAppComponent.builder()
                         .mainToolsProvider(mainToolsProvider)
                         .repoProvider(repoProvider)
-                        .githubBrowserProvider(githubBrowserProvider)
                         .build()
             }
         }

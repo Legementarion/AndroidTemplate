@@ -11,7 +11,5 @@ include ':notifications'
 project(':notifications').projectDir = new File(rootDir, 'sources/features/notifications/notifications-fake')
 
 
-include ':githubbrowser'
-project(':githubbrowser').projectDir = new File(rootDir, 'sources/features/githubbrowser')
 include ':mainscreen'
 project(':mainscreen').projectDir = new File(rootDir, 'sources/features/mainscreen')

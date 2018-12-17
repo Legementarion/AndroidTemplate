@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
-import com.demoss.idp.base.mvp.BasePresenter
+import com.kotlinsg.kworkshopapp.base.mvp.BasePresenter
 import com.kotlinsg.kworkshopapp.base.mvp.BaseView
 
 abstract class BaseActivity<Presenter : BasePresenter> : AppCompatActivity(), BaseView {

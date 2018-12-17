@@ -1,9 +1,6 @@
-package com.demoss.idp.base.mvp
-
-import com.kotlinsg.kworkshopapp.base.mvp.BaseView
+package com.kotlinsg.kworkshopapp.base.mvp
 
 interface BasePresenter {
-
     fun attachView(view: BaseView)
     fun detachView()
     fun viewShown()

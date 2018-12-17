@@ -1,6 +1,5 @@
-package com.demoss.idp.base.mvp
+package com.kotlinsg.kworkshopapp.base.mvp
 
-import com.kotlinsg.kworkshopapp.base.mvp.BaseView
 import io.reactivex.disposables.CompositeDisposable
 
 abstract class BasePresenterImpl<V : BaseView> : BasePresenter {

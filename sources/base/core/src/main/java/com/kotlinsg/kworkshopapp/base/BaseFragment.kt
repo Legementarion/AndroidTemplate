@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
-import com.demoss.idp.base.mvp.BasePresenter
+import com.kotlinsg.kworkshopapp.base.mvp.BasePresenter
 import com.kotlinsg.kworkshopapp.base.mvp.BaseView
 
 abstract class BaseFragment<Presenter : BasePresenter> : Fragment(), BaseView {

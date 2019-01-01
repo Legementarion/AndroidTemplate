@@ -6,13 +6,15 @@ import com.kotlinsg.kworkshopapp.appB.R
 import com.kotlinsg.kworkshopapp.di.Logger
 import com.kotlinsg.kworkshopapp.di.MainActivityComponent
 import com.kotlinsg.kworkshopapp.tools.Toaster
-import javax.inject.Inject
 import kotlinx.android.synthetic.main.activity_main.*
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
-    @Inject lateinit var log: Logger
-    @Inject lateinit var toast: Toaster
+    @Inject
+    lateinit var log: Logger
+    @Inject
+    lateinit var toast: Toaster
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        icon.setOnClickListener { openNextScreen() }
+        iconBtn.setOnClickListener { openNextScreen() }
         log.d("Main activity created. Logger injected successfully")
     }
 
@@ -32,5 +34,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun openNextScreen() {
         toast.show("Work Fine")
+        if (motionContainer.currentState == R.layout.activity_main_end) {
+            motionContainer.transitionToStart()
+        } else {
+            motionContainer.transitionToEnd()
+        }
     }
+
 }

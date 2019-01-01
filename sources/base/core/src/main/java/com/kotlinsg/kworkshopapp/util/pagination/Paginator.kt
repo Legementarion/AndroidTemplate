@@ -5,8 +5,11 @@ import io.reactivex.disposables.Disposable
 
 class Paginator<T>(
     private val requestFactory: (Int) -> Single<List<T>>,
-    private val viewController: ViewController<T>
-) {
+    private val viewController: ViewController<T>) {
+
+    companion object {
+        private const val FIRST_PAGE = 1
+    }
 
     interface ViewController<T> {
         fun showEmptyProgress(show: Boolean)
@@ -18,7 +21,6 @@ class Paginator<T>(
         fun showPageProgress(show: Boolean)
     }
 
-    private val FIRST_PAGE = 1
 
     private var currentState: State<T> = EMPTY()
     private var currentPage = 0
@@ -62,7 +64,7 @@ class Paginator<T>(
     private inner class EMPTY : State<T> {
 
         override fun refresh() {
-            currentState = EMPTY_PROGRESS()
+            currentState = EmptyProgress()
             viewController.showEmptyProgress(true)
             loadPage(FIRST_PAGE)
         }
@@ -72,7 +74,7 @@ class Paginator<T>(
         }
     }
 
-    private inner class EMPTY_PROGRESS : State<T> {
+    private inner class EmptyProgress : State<T> {
 
         override fun restart() {
             loadPage(FIRST_PAGE)
@@ -91,7 +93,7 @@ class Paginator<T>(
                     showEmptyProgress(false)
                 }
             } else {
-                currentState = EMPTY_DATA()
+                currentState = EmptyData()
                 viewController.apply {
                     showEmptyProgress(false)
                     showEmptyView(true)
@@ -100,7 +102,7 @@ class Paginator<T>(
         }
 
         override fun fail(error: Throwable) {
-            currentState = EMPTY_ERROR()
+            currentState = EmptyError()
             viewController.apply {
                 showEmptyProgress(false)
                 showEmptyError(true, error)
@@ -112,10 +114,10 @@ class Paginator<T>(
         }
     }
 
-    private inner class EMPTY_ERROR : State<T> {
+    private inner class EmptyError : State<T> {
 
         override fun restart() {
-            currentState = EMPTY_PROGRESS()
+            currentState = EmptyProgress()
             viewController.apply {
                 showEmptyError(false)
                 showEmptyProgress(true)
@@ -124,7 +126,7 @@ class Paginator<T>(
         }
 
         override fun refresh() {
-            currentState = EMPTY_PROGRESS()
+            currentState = EmptyProgress()
             viewController.apply {
                 showEmptyError(false)
                 showEmptyProgress(true)
@@ -137,10 +139,10 @@ class Paginator<T>(
         }
     }
 
-    private inner class EMPTY_DATA : State<T> {
+    private inner class EmptyData : State<T> {
 
         override fun restart() {
-            currentState = EMPTY_PROGRESS()
+            currentState = EmptyProgress()
             viewController.apply {
                 showEmptyView(false)
                 showEmptyProgress(true)
@@ -149,7 +151,7 @@ class Paginator<T>(
         }
 
         override fun refresh() {
-            currentState = EMPTY_PROGRESS()
+            currentState = EmptyProgress()
             viewController.apply {
                 showEmptyView(false)
                 showEmptyProgress(true)
@@ -165,7 +167,7 @@ class Paginator<T>(
     private inner class DATA : State<T> {
 
         override fun restart() {
-            currentState = EMPTY_PROGRESS()
+            currentState = EmptyProgress()
             viewController.apply {
                 showData(false)
                 showEmptyProgress(true)
@@ -180,7 +182,7 @@ class Paginator<T>(
         }
 
         override fun loadNewPage() {
-            currentState = PAGE_PROGRESS()
+            currentState = PageProgress()
             viewController.showPageProgress(true)
             loadPage(currentPage + 1)
         }
@@ -193,7 +195,7 @@ class Paginator<T>(
     private inner class REFRESH : State<T> {
 
         override fun restart() {
-            currentState = EMPTY_PROGRESS()
+            currentState = EmptyProgress()
             viewController.apply {
                 showData(false)
                 showRefreshProgress(false)
@@ -215,7 +217,7 @@ class Paginator<T>(
                     showData(true, currentData)
                 }
             } else {
-                currentState = EMPTY_DATA()
+                currentState = EmptyData()
                 currentData.clear()
                 viewController.apply {
                     showData(false)
@@ -238,10 +240,10 @@ class Paginator<T>(
         }
     }
 
-    private inner class PAGE_PROGRESS : State<T> {
+    private inner class PageProgress : State<T> {
 
         override fun restart() {
-            currentState = EMPTY_PROGRESS()
+            currentState = EmptyProgress()
             viewController.apply {
                 showData(false)
                 showPageProgress(false)
@@ -260,7 +262,7 @@ class Paginator<T>(
                     showData(true, currentData)
                 }
             } else {
-                currentState = ALL_DATA()
+                currentState = AllData()
                 viewController.showPageProgress(false)
             }
         }
@@ -287,10 +289,10 @@ class Paginator<T>(
         }
     }
 
-    private inner class ALL_DATA : State<T> {
+    private inner class AllData : State<T> {
 
         override fun restart() {
-            currentState = EMPTY_PROGRESS()
+            currentState = EmptyProgress()
             viewController.apply {
                 showData(false)
                 showEmptyProgress(true)

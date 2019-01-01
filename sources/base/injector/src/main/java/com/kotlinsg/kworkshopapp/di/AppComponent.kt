@@ -5,14 +5,13 @@ import com.kotlinsg.kworkshopapp.repo.di.RepoComponent
 import dagger.Component
 import javax.inject.Singleton
 
-
 @Component(
         dependencies = [
             MainToolsProvider::class,
-            RepoProvider::class,
-            GithubBrowserProvider::class
+            RepoProvider::class
         ]
 )
+
 @Singleton
 interface AppComponent : ApplicationProvider {
 

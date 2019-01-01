@@ -1,0 +1,24 @@
+<resources>
+
+    <!--Base-->
+    <dimen name="base_0dp">0dp</dimen>
+    <dimen name="base_4dp">4dp</dimen>
+    <dimen name="base_8dp">8dp</dimen>
+    <dimen name="base_10dp">10dp</dimen>
+    <dimen name="base_12dp">12dp</dimen>
+    <dimen name="base_14dp">14dp</dimen>
+    <dimen name="base_16dp">16dp</dimen>
+    <dimen name="base_24dp">24dp</dimen>
+    <dimen name="base_32dp">32dp</dimen>
+    <dimen name="base_36dp">36dp</dimen>
+    <dimen name="base_48dp">48dp</dimen>
+    <dimen name="base_54dp">54dp</dimen>
+
+    <!--Text-->
+    <dimen name="text_size_tiny">10sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="text_size_common">15sp</dimen>
+    <dimen name="text_size_title">18sp</dimen>
+
+</resources>

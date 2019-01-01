@@ -2,17 +2,17 @@ package com.kotlinsg.kworkshopapp
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.view.View
-import com.kotlinsg.kworkshopapp.actions.ShowGithubScreenAction
 import com.kotlinsg.kworkshopapp.appB.R
 import com.kotlinsg.kworkshopapp.di.Logger
 import com.kotlinsg.kworkshopapp.di.MainActivityComponent
+import com.kotlinsg.kworkshopapp.tools.Toaster
 import javax.inject.Inject
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     @Inject lateinit var log: Logger
-    @Inject lateinit var showGithubScreenAction: ShowGithubScreenAction
+    @Inject lateinit var toast: Toaster
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        findViewById<View>(R.id.icon).setOnClickListener { openGithubScreen() }
+        icon.setOnClickListener { openNextScreen() }
         log.d("Main activity created. Logger injected successfully")
     }
 
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                 .inject(this@MainActivity)
     }
 
-    private fun openGithubScreen() {
-        showGithubScreenAction.show(this)
+    private fun openNextScreen() {
+        toast.show("Work Fine")
     }
 }

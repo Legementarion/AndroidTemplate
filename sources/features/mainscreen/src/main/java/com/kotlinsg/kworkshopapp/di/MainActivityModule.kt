@@ -1,6 +1,7 @@
 package com.kotlinsg.kworkshopapp.di
 
-import dagger.Module
+import org.koin.dsl.module
 
-@Module
-interface MainActivityModule
+val mainActivityModule = module {
+
+}

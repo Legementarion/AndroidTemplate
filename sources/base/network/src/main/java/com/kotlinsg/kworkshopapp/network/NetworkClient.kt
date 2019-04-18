@@ -2,13 +2,12 @@ package com.kotlinsg.kworkshopapp.network
 
 import com.kotlinsg.kworkshopapp.GithubProject
 import com.kotlinsg.kworkshopapp.di.Logger
-import javax.inject.Inject
 
 interface NetworkClient {
     fun requestProject(path: String, onResult: (GithubProject) -> Unit, onError: (Throwable) -> Unit)
 }
 
-class NetworkClientImpl @Inject constructor(
+class NetworkClientImpl constructor(
         private val logger: Logger
 ) : NetworkClient {
 

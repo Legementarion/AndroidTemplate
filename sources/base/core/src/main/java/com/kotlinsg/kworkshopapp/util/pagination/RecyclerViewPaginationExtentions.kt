@@ -1,6 +1,6 @@
 package com.kotlinsg.kworkshopapp.util.pagination
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 
 fun RecyclerView.setOnNextPageListener(focus: Int, onScrolled: () -> Unit) {
     addOnScrollListener(object : RecyclerView.OnScrollListener() {

@@ -1,10 +1,10 @@
 package com.kotlinsg.kworkshopapp.base
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.kotlinsg.kworkshopapp.base.mvp.BasePresenter
 import com.kotlinsg.kworkshopapp.base.mvp.BaseView
 
@@ -39,7 +39,7 @@ abstract class BaseActivity<Presenter : BasePresenter> : AppCompatActivity(), Ba
     }
 
     final override fun hideKeyboard() {
-        (getSystemService(AppCompatActivity.INPUT_METHOD_SERVICE) as InputMethodManager)
+        (getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager)
                 .hideSoftInputFromWindow((currentFocus ?: View(this)).windowToken, 0)
     }
 }

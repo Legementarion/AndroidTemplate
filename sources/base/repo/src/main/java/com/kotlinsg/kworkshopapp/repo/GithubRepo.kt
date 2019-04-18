@@ -3,9 +3,8 @@ package com.kotlinsg.kworkshopapp.repo
 import com.kotlinsg.kworkshopapp.GithubProject
 import com.kotlinsg.kworkshopapp.di.Logger
 import com.kotlinsg.kworkshopapp.network.NetworkClient
-import javax.inject.Inject
 
-class GithubRepoImpl @Inject constructor(
+class GithubRepoImpl constructor(
         private val client: NetworkClient,
         private val logger: Logger
 ) : GithubRepo {

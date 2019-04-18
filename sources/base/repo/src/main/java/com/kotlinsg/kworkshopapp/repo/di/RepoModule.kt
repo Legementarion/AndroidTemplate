@@ -1,13 +1,12 @@
 package com.kotlinsg.kworkshopapp.repo.di
 
+import com.kotlinsg.kworkshopapp.network.di.networkModule
 import com.kotlinsg.kworkshopapp.repo.GithubRepo
 import com.kotlinsg.kworkshopapp.repo.GithubRepoImpl
-import dagger.Binds
-import dagger.Module
+import org.koin.dsl.module
 
-@Module
-interface RepoModule {
-
-    @Binds fun bindsMainRepo(impl: GithubRepoImpl): GithubRepo
-
+val repositoryModule = module {
+    factory<GithubRepo> { GithubRepoImpl(get(), get()) }
 }
+
+val featureNetwork = listOf(repositoryModule, networkModule)

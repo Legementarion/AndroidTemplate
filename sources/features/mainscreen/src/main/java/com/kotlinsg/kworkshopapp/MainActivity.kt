@@ -1,7 +1,7 @@
 package com.kotlinsg.kworkshopapp
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.kotlinsg.kworkshopapp.appB.R
 import com.kotlinsg.kworkshopapp.di.Logger
 import com.kotlinsg.kworkshopapp.di.MainActivityComponent
@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         iconBtn.setOnClickListener { openNextScreen() }
         log.d("Main activity created. Logger injected successfully")
+        toast.show("Work Fine")
     }
 
     private fun inject() {
@@ -33,7 +34,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openNextScreen() {
-        toast.show("Work Fine")
         if (motionContainer.currentState == R.layout.activity_main_end) {
             motionContainer.transitionToStart()
         } else {

@@ -26,6 +26,7 @@ dependencies {
     implementation project(':repo')
     implementation project(':core')
     implementation project(':mainscreen')
+    implementation project(':notifications')
 
     // Glide
     implementation "com.github.bumptech.glide:glide:$glide_version"

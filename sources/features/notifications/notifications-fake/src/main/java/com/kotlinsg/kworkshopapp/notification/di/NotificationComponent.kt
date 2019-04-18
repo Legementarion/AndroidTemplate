@@ -4,10 +4,11 @@ import com.kotlinsg.kworkshopapp.tools.Toaster
 import org.koin.dsl.module
 
 val notificationModule = module {
-    factory {
-        object :NotificationUseCase{
-        override fun showMessage() {
-            get<Toaster>().show("notifications are not implemented")
+    factory<NotificationUseCase> {
+        object : NotificationUseCase {
+            override fun showMessage() {
+                get<Toaster>().show("notifications are not implemented")
+            }
         }
-    } }
+    }
 }

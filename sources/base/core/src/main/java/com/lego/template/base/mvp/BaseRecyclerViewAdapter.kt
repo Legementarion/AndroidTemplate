@@ -1,4 +1,4 @@
-package com.lego.template.base
+package com.lego.template.base.mvp
 
 import android.view.LayoutInflater
 import android.view.View

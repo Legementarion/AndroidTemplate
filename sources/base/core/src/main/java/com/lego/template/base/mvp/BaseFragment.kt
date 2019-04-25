@@ -1,4 +1,4 @@
-package com.lego.template.base
+package com.lego.template.base.mvp
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,8 +8,6 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.lego.template.base.mvp.BasePresenter
-import com.lego.template.base.mvp.BaseView
 
 abstract class BaseFragment<Presenter : BasePresenter> : Fragment(), BaseView {
 

@@ -30,7 +30,6 @@ class RealApp : Application() {
     }
 
     private fun initFabric() {
-
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
         } else {

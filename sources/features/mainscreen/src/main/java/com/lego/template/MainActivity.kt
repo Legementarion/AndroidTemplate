@@ -2,8 +2,8 @@ package com.lego.template
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.lego.template.appB.R
 import com.lego.template.di.Logger
+import com.lego.template.mainscreen.R
 import com.lego.template.tools.Toaster
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.inject

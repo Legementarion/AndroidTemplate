@@ -6,16 +6,6 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 28
 
-    defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
-    }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -44,8 +34,4 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
-}
-
-repositories {
-    mavenCentral()
 }

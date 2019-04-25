@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.lego.template.di.Logger
 import com.lego.template.mainscreen.R
 import com.lego.template.tools.Toaster
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.motion_start.*
 import org.koin.android.ext.android.inject
 
 class MainActivity : AppCompatActivity() {
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openNextScreen() {
-        if (motionContainer.currentState == R.layout.activity_main_end) {
+        if (motionContainer.currentState == R.layout.motion_end) {
             motionContainer.transitionToStart()
         } else {
             motionContainer.transitionToEnd()

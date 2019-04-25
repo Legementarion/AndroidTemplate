@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hello_message">Hi folks!</string>
+    <string name="chat_screen">Chat Screen</string>
+    <string name="recycler_screen">Recycler Screen</string>
+    <string name="map_screen">Map Screen</string>
+    <string name="vr">VR</string>
 </resources>

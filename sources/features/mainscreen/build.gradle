@@ -16,10 +16,5 @@ android {
 
 dependencies {
     implementation project(':core')
-    implementation project(':map_screen')
-    implementation project(':recycle_screen')
-    implementation project(':vr_screen')
-    implementation project(':chat_module')
-
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha4'
+    api 'androidx.constraintlayout:constraintlayout:2.0.0-alpha4'
 }

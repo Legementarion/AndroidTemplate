@@ -33,7 +33,7 @@ class NetworkException private constructor(
 //        get() = gson.fromJson(response?.errorBody()!!.string(), ServerErrorModel::class.java)
 
     /**
-     * Identifies the event kind which triggered a [RetrofitException].
+     * Identifies the event kind which triggered a [NetworkException].
      */
     enum class Kind {
         /**

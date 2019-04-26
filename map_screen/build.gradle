@@ -6,5 +6,5 @@ android {
 
 dependencies {
     implementation project(':core')
-    implementation project(':mainscreen')
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
 }

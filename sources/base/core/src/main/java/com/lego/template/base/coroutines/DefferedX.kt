@@ -1,5 +1,6 @@
 package com.lego.template.base.coroutines
 
+import com.lego.template.base.tryHandleError
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
@@ -17,7 +18,7 @@ fun <T, R> zip(
             onSuccess(Pair(result1, result2))
         } catch (e: Exception) {
             e.printStackTrace()
-//           todo  tryHandleError
+//            tryHandleError(e = e, onFailed = onFailed)
         }
     }
 }

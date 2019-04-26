@@ -41,8 +41,8 @@ abstract class BaseFragment<Presenter : BasePresenter> : Fragment(), BaseView {
     }
 
     final override fun hideKeyboard() {
-        (activity?.getSystemService(AppCompatActivity.INPUT_METHOD_SERVICE) as InputMethodManager)
-                .hideSoftInputFromWindow((activity?.currentFocus ?: View(context)).windowToken, 0)
+        (activity?.getSystemService(AppCompatActivity.INPUT_METHOD_SERVICE) as? InputMethodManager)
+                ?.hideSoftInputFromWindow((activity?.currentFocus ?: View(context)).windowToken, 0)
     }
 
 }

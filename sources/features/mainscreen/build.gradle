@@ -16,5 +16,12 @@ android {
 
 dependencies {
     implementation project(':core')
+    implementation project(':chat_module')
+    implementation project(':map_screen')
+    implementation project(':recycle_screen')
+    implementation "androidx.navigation:navigation-ui-ktx:2.0.0"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.0.0"
+    implementation 'org.koin:koin-androidx-viewmodel:2.0.0-beta-4'
     api 'androidx.constraintlayout:constraintlayout:2.0.0-alpha4'
+
 }

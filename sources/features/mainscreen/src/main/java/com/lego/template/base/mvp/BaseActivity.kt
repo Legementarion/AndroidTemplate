@@ -37,7 +37,7 @@ abstract class BaseActivity<Presenter : BasePresenter> : AppCompatActivity(), Ba
     }
 
     final override fun hideKeyboard() {
-        (getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager)
-                .hideSoftInputFromWindow((currentFocus ?: View(this)).windowToken, 0)
+        (getSystemService(INPUT_METHOD_SERVICE) as? InputMethodManager)
+                ?.hideSoftInputFromWindow((currentFocus ?: View(this)).windowToken, 0)
     }
 }

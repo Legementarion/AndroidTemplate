@@ -15,6 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="626d904b52d641a59e201ba4bdf74974e53fbb18"
+            />
+
     </application>
 
 </manifest>

@@ -5,7 +5,6 @@ import com.lego.template.repo.di.featureNetwork
 
 val appModule = listOf(
         toolsModule,
-        notificationModule,
-        mainActivityModule
-) + featureNetwork
+        notificationModule
+) + featureNetwork + featureUI
 

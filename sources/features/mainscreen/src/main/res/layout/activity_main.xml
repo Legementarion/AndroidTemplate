@@ -1,60 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/container"
+    android:id="@+id/nav_host_fragment"
+    android:name="androidx.navigation.fragment.NavHostFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutDescription="@xml/motion_scene">
+    app:defaultNavHost="true"
+    app:layout_constraintBottom_toBottomOf="parent"
 
-    <include layout="@layout/motion_start" />
-
-    <Button
-        android:id="@+id/btnChat"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="@dimen/base_48dp"
-        android:layout_marginTop="@dimen/base_32dp"
-        android:layout_marginEnd="@dimen/base_48dp"
-        android:text="@string/chat_screen"
-        app:layout_constraintEnd_toStartOf="@id/btnRecycler"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guideline" />
-
-    <Button
-        android:id="@+id/btnRecycler"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="@dimen/base_48dp"
-        android:layout_marginTop="@dimen/base_32dp"
-        android:layout_marginEnd="@dimen/base_48dp"
-        android:text="@string/recycler_screen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnChat"
-        app:layout_constraintTop_toBottomOf="@+id/guideline" />
-
-    <Button
-        android:id="@+id/btnMap"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:text="@string/map_screen"
-        app:layout_constraintEnd_toEndOf="@+id/btnRecycler"
-        app:layout_constraintStart_toStartOf="@+id/btnRecycler"
-        app:layout_constraintTop_toBottomOf="@+id/btnRecycler" />
-
-    <Button
-        android:id="@+id/btnVr"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:text="@string/vr"
-        app:layout_constraintEnd_toEndOf="@+id/btnChat"
-        app:layout_constraintStart_toStartOf="@+id/btnChat"
-        app:layout_constraintTop_toBottomOf="@+id/btnChat" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
-
-</androidx.constraintlayout.motion.widget.MotionLayout>
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:navGraph="@navigation/nav_graph_base" />

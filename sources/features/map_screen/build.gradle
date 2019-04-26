@@ -12,9 +12,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+
+    dataBinding {
+        enabled true
+    }
 }
 
 dependencies {
     implementation project(':core')
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha4'
     implementation 'com.google.android.gms:play-services-maps:16.1.0'
 }

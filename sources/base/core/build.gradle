@@ -36,6 +36,4 @@ dependencies {
 
     implementation "androidx.navigation:navigation-ui-ktx:2.0.0"
     implementation "androidx.navigation:navigation-fragment-ktx:2.0.0"
-    implementation 'org.koin:koin-androidx-viewmodel:2.0.0-beta-4'
-
 }

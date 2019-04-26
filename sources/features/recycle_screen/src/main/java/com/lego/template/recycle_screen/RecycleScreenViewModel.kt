@@ -1,4 +1,4 @@
-package com.lego.template.mylibrary
+package com.lego.template.recycle_screen
 
 import com.lego.template.base.mvvm.BaseViewModel
 

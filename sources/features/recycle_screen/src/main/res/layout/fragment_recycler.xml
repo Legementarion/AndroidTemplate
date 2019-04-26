@@ -6,7 +6,7 @@
 
         <variable
             name="viewmodel"
-            type="com.lego.template.mylibrary.RecycleScreenViewModel" />
+            type="com.lego.template.recycle_screen.RecycleScreenViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

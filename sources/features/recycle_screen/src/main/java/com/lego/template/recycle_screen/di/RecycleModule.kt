@@ -1,6 +1,6 @@
-package com.lego.template.mylibrary.di
+package com.lego.template.recycle_screen.di
 
-import com.lego.template.mylibrary.RecycleScreenViewModel
+import com.lego.template.recycle_screen.RecycleScreenViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

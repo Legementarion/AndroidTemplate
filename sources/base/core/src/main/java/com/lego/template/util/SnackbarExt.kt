@@ -1,4 +1,4 @@
-package com.lego.template.utils
+package com.lego.template.util
 
 import android.view.View
 import androidx.fragment.app.Fragment

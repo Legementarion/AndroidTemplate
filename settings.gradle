@@ -1,4 +1,4 @@
-include ':core', ':map_screen', ':recycle_screen', ':chat_module', ':vr_screen'
+include ':core'
 project(':core').projectDir = new File(rootDir, 'sources/base/core')
 include ':injector'
 project(':injector').projectDir = new File(rootDir, 'sources/base/injector')
@@ -10,6 +10,17 @@ project(':network').projectDir = new File(rootDir, 'sources/base/network')
 include ':notifications'
 project(':notifications').projectDir = new File(rootDir, 'sources/features/notifications/notifications-fake')
 
-
 include ':mainscreen'
 project(':mainscreen').projectDir = new File(rootDir, 'sources/features/mainscreen')
+
+include ':map_screen'
+project(':map_screen').projectDir = new File(rootDir, 'sources/features/map_screen')
+
+include ':recycle_screen'
+project(':recycle_screen').projectDir = new File(rootDir, 'sources/features/recycle_screen')
+
+include ':chat_module'
+project(':chat_module').projectDir = new File(rootDir, 'sources/features/chat_module')
+
+include ':vr_screen'
+project(':vr_screen').projectDir = new File(rootDir, 'sources/features/vr_screen')

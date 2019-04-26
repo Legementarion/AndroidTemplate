@@ -9,7 +9,7 @@ import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.lego.template.base.navigation.NavigationCommand
-import com.lego.template.utils.setupSnackbar
+import com.lego.template.util.setupSnackbar
 
 abstract class BaseFragment : Fragment() {
 

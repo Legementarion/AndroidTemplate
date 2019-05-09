@@ -16,6 +16,27 @@
         <!--<argument android:name="login" app:argType="string"/>-->
         <!--</action>-->
 
+        <action
+            android:id="@+id/action_homeFragment_to_mapScreenFragment"
+            app:destination="@id/mapScreenFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chatScreenFragment"
+            app:destination="@id/chatScreenFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_recycleScreenFragment"
+            app:destination="@id/recycleScreenFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/mapScreenFragment"
+        android:name="com.lego.template.map_screen.MapScreenFragment"
+        android:label="MapScreenFragment" />
+    <fragment
+        android:id="@+id/chatScreenFragment"
+        android:name="com.lego.template.chat_module.ChatScreenFragment"
+        android:label="ChatScreenFragment" />
+    <fragment
+        android:id="@+id/recycleScreenFragment"
+        android:name="com.lego.template.recycle_screen.RecycleScreenFragment"
+        android:label="RecycleScreenFragment" />
 
 </navigation>

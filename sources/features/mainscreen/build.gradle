@@ -26,7 +26,7 @@ dependencies {
     implementation project(':recycle_screen')
     kapt 'com.android.databinding:compiler:3.1.4'
 
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha4'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha5'
     implementation "androidx.navigation:navigation-ui-ktx:2.0.0"
     implementation "androidx.navigation:navigation-fragment-ktx:2.0.0"
 }

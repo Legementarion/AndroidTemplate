@@ -1,12 +1,8 @@
-<manifest xmlns:dist="http://schemas.android.com/apk/distribution"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lego.template.map_screen">
 
-    <dist:module
-        dist:instant="false"
-        dist:onDemand="true"
-        dist:title="@string/title_map_screen">
-        <dist:fusing dist:include="true" />
-    </dist:module>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
 </manifest>
 
